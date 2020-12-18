@@ -32,12 +32,15 @@ public abstract class Command {
     }
 
     protected String handleArguments(String[] input) {
-        for (int index = 0; index < arguments.length; index++) {
-            Argument argument = arguments[index];
-            argument.setPresent(input.length > index);
-            argument.setValue(input[index + 1]);
+        boolean correctSyntax = (input.length - 1) == arguments.length;
+        if (correctSyntax) {
+            for (int index = 0; index < arguments.length; index++) {
+                Argument argument = arguments[index];
+                argument.setPresent(input.length > index);
+                argument.setValue(input[index + 1]);
+                correctSyntax = argument.isPresent();
+            }
         }
-        boolean correctSyntax = (input.length - 1) >= arguments.length;
 
         return correctSyntax ? execute() : getSyntax(input[0]);
     }
