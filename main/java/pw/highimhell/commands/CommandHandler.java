@@ -18,11 +18,8 @@ public class CommandHandler {
 
     private String handleCommands(String[] input) {
         Command command = getCommand(input[0].replaceFirst(prefix, ""));
-
-        if (command.getArguments() != null) {
-            return command.handleArguments(input);
-        }
-        return command.execute();
+        return command.getArguments() != null ?
+                command.handleArguments(input) : command.execute();
     }
 
     public String execute(String command) {
