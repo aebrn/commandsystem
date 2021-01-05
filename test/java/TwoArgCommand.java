@@ -1,9 +1,9 @@
-import pw.highimhell.commands.Arguments;
-import pw.highimhell.commands.Command;
-import pw.highimhell.commands.Syntax;
+import io.aebrn.commands.Arguments;
+import io.aebrn.commands.Command;
+import io.aebrn.commands.Syntax;
 
 /**
- * @author hell
+ * @author aebrn
  * 12/12/2020
  */
 @Arguments({"first", "second"})

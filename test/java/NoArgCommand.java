@@ -1,7 +1,7 @@
-import pw.highimhell.commands.Command;
+import io.aebrn.commands.Command;
 
 /**
- * @author hell
+ * @author aebrn
  * 12/12/2020
  */
 public final class NoArgCommand extends Command {

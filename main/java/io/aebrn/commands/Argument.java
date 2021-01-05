@@ -1,9 +1,9 @@
-package pw.highimhell.commands;
+package io.aebrn.commands;
 
-import pw.highimhell.commons.interfaces.Labeled;
+import io.aebrn.commons.interfaces.Labeled;
 
 /**
- * @author hell
+ * @author aebrn
  * 12/12/2020
  */
 public class Argument implements Labeled {

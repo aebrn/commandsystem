@@ -1,7 +1,7 @@
-import pw.highimhell.commands.CommandHandler;
+import io.aebrn.commands.CommandHandler;
 
 /**
- * @author hell
+ * @author aebrn
  * 12/12/2020
  */
 public final class TestCommandHandler extends CommandHandler {

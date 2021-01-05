@@ -1,11 +1,11 @@
-package pw.highimhell.commands;
+package io.aebrn.commands;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 /**
- * @author hell
+ * @author aebrn
  * 12/12/2020
  */
 public abstract class Command {
@@ -21,10 +21,10 @@ public abstract class Command {
             this.syntax = syntax.value();
         }
 
-        Arguments annotationArguments = this.getClass().getAnnotation(Arguments.class);
+        Arguments arguments = this.getClass().getAnnotation(Arguments.class);
         if (this.getClass().isAnnotationPresent(Arguments.class)) {
-            for (String argument : annotationArguments.value()) {
-                arguments = addArguments(new Argument(argument), arguments);
+            for (String argument : arguments.value()) {
+                this.arguments = addArguments(new Argument(argument), this.arguments);
             }
         } else {
             this.arguments = null;

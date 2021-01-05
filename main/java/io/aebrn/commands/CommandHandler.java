@@ -1,10 +1,10 @@
-package pw.highimhell.commands;
+package io.aebrn.commands;
 
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 
 /**
- * @author hell
+ * @author aebrn
  * 12/12/2020
  */
 public class CommandHandler {
