@@ -11,7 +11,7 @@ import java.util.List;
 public abstract class Command {
     private final String[] aliases;
     private String syntax;
-    private Argument[] arguments;
+    private Argument[] arguments = new Argument[]{};
 
     public Command(String... aliases) {
         this.aliases = aliases;
